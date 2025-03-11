@@ -1,0 +1,10 @@
+Complier/main.c: In function ‘main’:
+Complier/main.c:20:18: error: expected ‘)’ before ‘mn’
+   20 |     printf("%d\n" mn); // Забыл запятую
+      |           ~      ^~~
+      |                  )
+Complier/main.c:20:14: warning: format ‘%d’ expects a matching ‘int’ argument [-Wformat=]
+   20 |     printf("%d\n" mn); // Забыл запятую
+      |             ~^
+      |              |
+      |              int

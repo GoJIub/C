@@ -1,0 +1,1586 @@
+In file included from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2:
+Preprocessing/mathlib.h:1:110: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include "main.c" // Внутри main.c происходит вызов functions.h, что ведёт к "бесконечному" вызову друг друга
+      |                                                                                                              ^
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+In file included from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/main.c:2,
+                 from Preprocessing/mathlib.h:1,
+                 from Preprocessing/mathlib.c:1:
+Preprocessing/mathlib.h:1:110: error: #include nested depth 200 exceeds maximum of 200 (use -fmax-include-depth=DEPTH to increase the maximum)
+    1 | #include "main.c" // Внутри main.c происходит вызов functions.h, что ведёт к "бесконечному" вызову друг друга
+      |                                                                                                              ^
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: error: redefinition of ‘main’
+    8 | int main() {
+      |     ^~~~
+Preprocessing/main.c:8:5: note: previous definition of ‘main’ with type ‘int()’
+    8 | int main() {
+      |     ^~~~

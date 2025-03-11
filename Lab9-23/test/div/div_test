@@ -1,0 +1,12 @@
+
+#!/bin/bash
+
+echo "" > test/div.txt
+
+for i in {-20..20}; do 
+    for j in {-20..20}; do
+        echo "$i $j" | python3 test/div/div.py > test/div/div_py.txt
+        echo "$i $j" | ./test/div/div.out > test/div/div_c.txt
+        python3 test/div/div_test.py >> test/div.txt
+    done
+done

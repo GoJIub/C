@@ -1,0 +1,12 @@
+
+#!/bin/bash
+
+echo "" > test/mod.txt
+
+for i in {-20..20}; do 
+    for j in {-20..20}; do
+        echo "$i $j" | python3 test/mod/mod.py > test/mod/mod_py.txt
+        echo "$i $j" | ./test/mod/mod.out > test/mod/mod_c.txt
+        python3 test/mod/mod_test.py >> test/mod.txt
+    done
+done

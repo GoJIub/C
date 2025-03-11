@@ -1,0 +1,4 @@
+Preprocessing/main.c:5:2: error: invalid preprocessing directive #Define; did you mean #define?
+    5 | #Define abs(x) x > 0 ? x : -x // В названии ключевого слова допущена ошибка
+      |  ^~~~~~
+      |  define

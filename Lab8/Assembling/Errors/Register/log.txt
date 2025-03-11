@@ -1,0 +1,2 @@
+Assembling/main.c: Assembler messages:
+Assembling/main.c:11: Error: register type mismatch for `add'

@@ -1,0 +1,4 @@
+Preprocessing/main.c:4:10: fatal error: doesn't_exist.h: No such file or directory
+    4 | #include "doesn't_exist.h" // Такого файла просто не существует
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.

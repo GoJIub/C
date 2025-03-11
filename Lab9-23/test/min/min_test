@@ -1,0 +1,12 @@
+
+#!/bin/bash
+
+echo "" > test/min.txt
+
+for i in {-5..5}; do 
+    for j in {-5..5}; do
+        echo "$i $j" | python3 test/min/min.py > test/min/min_py.txt
+        echo "$i $j" | ./test/min/min.out > test/min/min_c.txt
+        python3 test/min/min_test.py >> test/min.txt
+    done
+done

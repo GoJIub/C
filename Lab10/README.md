@@ -1,0 +1,570 @@
+# Отдельные примеры
+
+## С чего всё начинается
+
+**Используем ключ -g для создания отладочной информации. Длязапуска дебагера запускаем исполняемый файл с помощью gdb**
+
+```bash
+zhenia@zhenia-Lenovo-G50-45:~/C/Lab10$ gcc -g main.c
+zhenia@zhenia-Lenovo-G50-45:~/C/Lab10$ gdb ./a.out
+```
+
+## help
+
+**Справка**
+
+```gdb
+(gdb) help
+List of classes of commands:
+
+aliases -- User-defined aliases of other commands.
+breakpoints -- Making program stop at certain points.
+data -- Examining data.
+files -- Specifying and examining files.
+internals -- Maintenance commands.
+obscure -- Obscure features.
+running -- Running the program.
+stack -- Examining the stack.
+status -- Status inquiries.
+support -- Support facilities.
+text-user-interface -- TUI is the GDB text based interface.
+tracepoints -- Tracing of program execution without stopping the program.
+--Type <RET> for more, q to quit, c to continue without paging--RET
+user-defined -- User-defined commands.
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+```
+
+## break
+
+**Задание точки остановки**
+
+```gdb
+(gdb) break main
+Breakpoint 1 at 0x1291: file main.c, line 47.
+```
+
+## list
+
+**Распечатка текста функции**
+
+```gdb
+(gdb) list main.c : 46
+41
+42      // Тело
+43      int main() {
+44
+45          int a, b;
+46          // scanf("%d %d", &a, &b);
+47          printf("%d\n", my_pow(a, b));
+48          print(a, b);
+49      }
+(gdb) list main.c : 36
+31      }
+32
+33      void print_not_even(int l, int r) {
+34          if (l > r){
+35              printf("\n");
+36              return;    
+37          }
+38          printf("%d - not even, ", l);
+39          print_even(l + 1, r);
+40      }
+```
+
+## set args
+
+**Установка параметров**
+
+```gdb
+(gdb) set args 2 5
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+```
+
+## run
+
+**Запуск программы**
+
+```gdb
+(gdb) set args 2 5
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+```
+
+## set var
+
+**Присваивание значения переменной**
+
+```gdb
+(gdb) set var a=2, b=5
+(gdb) next
+32
+```
+
+## ptype
+
+**Определение типа переменной**
+
+```gdb
+(gdb) ptype a
+type = int
+```
+
+## print
+
+**Печать значения выражения**
+
+```gdb
+(gdb) print my_pow(a, b)
+$1 = 32
+```
+
+## next
+
+**Идёт по шагам, без захода в функции, но показывая результаты выполнения**
+
+### 1-ый случай
+```gdb
+(gdb) break my_pow
+Breakpoint 2 at 0x55555555517b: file main.c, line 11.
+(gdb) break print
+Breakpoint 3 at 0x5555555551b2: file main.c, line 18.
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:47
+47          printf("%d\n", my_pow(a, b));
+(gdb) set var a = 2, b = 5
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=5) at main.c:11
+11          if (power == 0)
+```
+### 2-ой случай
+```gdb
+(gdb) next
+2 - even, 3 - not even, 4 - even, 5 - not even, 
+49      }
+```
+
+## step
+
+**Проход всей программы по шагам**
+
+```gdb
+(gdb) step
+my_pow (base=2, power=5) at main.c:11
+11          if (power == 0)
+(gdb) step
+13          return base * my_pow(base, power - 1);
+(gdb) step
+my_pow (base=2, power=4) at main.c:11
+11          if (power == 0)
+(gdb) step
+13          return base * my_pow(base, power - 1);
+(gdb) step
+```
+
+## continue
+
+**next, которому плевать на всё**
+
+```gdb
+(gdb) continue
+Continuing.
+32
+2 - even, 3 - not even, 4 - even, 5 - not even, 
+[Inferior 1 (process 12235) exited normally]
+```
+
+## backtrace / bt
+
+**Вывод стэка вызовов**
+
+```gdb
+(gdb) bt
+#0  my_pow (base=2, power=2) at main.c:11
+#1  0x000055555555519a in my_pow (base=2, power=3) at main.c:13
+#2  0x000055555555519a in my_pow (base=2, power=4) at main.c:13
+#3  0x000055555555519a in my_pow (base=2, power=5) at main.c:13
+#4  0x00005555555552a0 in main () at main.c:47
+```
+
+```gdb
+(gdb) bt
+#0  print_even (l=6, r=5) at main.c:25
+#1  0x00005555555552c3 in print_not_even (l=5, r=5) at main.c:39
+#2  0x0000555555555270 in print_even (l=4, r=5) at main.c:30
+#3  0x00005555555552c3 in print_not_even (l=3, r=5) at main.c:39
+#4  0x0000555555555270 in print_even (l=2, r=5) at main.c:30
+#5  0x000055555555520b in print (l=2, r=5) at main.c:19
+#6  0x0000555555555333 in main () at main.c:48
+```
+
+## quit
+
+**Выход из дебагера**
+
+```gdb
+(gdb) Quit
+```
+
+# Полный log
+
+```gdb
+zhenia@zhenia-Lenovo-G50-45:~/C/Lab10$ gcc -ggdb main.c
+zhenia@zhenia-Lenovo-G50-45:~/C/Lab10$ gdb ./a.out
+GNU gdb (Ubuntu 15.0.50.20240403-0ubuntu1) 15.0.50.20240403-git
+Copyright (C) 2024 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+--Type <RET> for more, q to quit, c to continue without paging--RET
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...
+(gdb) help
+List of classes of commands:
+
+aliases -- User-defined aliases of other commands.
+breakpoints -- Making program stop at certain points.
+data -- Examining data.
+files -- Specifying and examining files.
+internals -- Maintenance commands.
+obscure -- Obscure features.
+running -- Running the program.
+stack -- Examining the stack.
+status -- Status inquiries.
+support -- Support facilities.
+text-user-interface -- TUI is the GDB text based interface.
+tracepoints -- Tracing of program execution without stopping the program.
+--Type <RET> for more, q to quit, c to continue without paging--RET
+user-defined -- User-defined commands.
+
+Type "help" followed by a class name for a list of commands in that class.
+Type "help all" for the list of all commands.
+Type "help" followed by command name for full documentation.
+Type "apropos word" to search for commands related to "word".
+Type "apropos -v word" for full documentation of commands related to "word".
+Command name abbreviations are allowed if unambiguous.
+(gdb) break main
+Breakpoint 1 at 0x1291: file main.c, line 47.
+(gdb) list main.c : 46
+41
+42      // Тело
+43      int main() {
+44
+45          int a, b;
+46          // scanf("%d %d", &a, &b);
+47          printf("%d\n", my_pow(a, b));
+48          print(a, b);
+49      }
+(gdb) list main.c : 36
+31      }
+32
+33      void print_not_even(int l, int r) {
+34          if (l > r){
+35              printf("\n");
+36              return;    
+37          }
+38          printf("%d - not even, ", l);
+39          print_even(l + 1, r);
+40      }
+(gdb) set args 2 5
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:47
+47          printf("%d\n", my_pow(a, b));
+(gdb) set var a=2, b=5
+(gdb) next
+32
+48          print(a, b);
+(gdb) step
+print (l=2, r=5) at main.c:18
+18          if (l % 2 == 0)
+(gdb) step
+19              print_even(l, r);
+(gdb) step
+print_even (l=2, r=5) at main.c:25
+25          if (l > r){
+(gdb) step
+29          printf("%d - even, ", l);
+(gdb) step
+__printf (format=0x555555556004 "%d - even, ") at ./stdio-common/printf.c:32
+warning: 32     ./stdio-common/printf.c: No such file or directory
+(gdb) next
+33      in ./stdio-common/printf.c
+(gdb) next
+36      in ./stdio-common/printf.c
+(gdb) next
+print_even (l=2, r=5) at main.c:30
+30          print_not_even(l + 1, r);
+(gdb) next
+2 - even, 3 - not even, 4 - even, 5 - not even, 
+31      }
+(gdb) next
+print (l=2, r=5) at main.c:22
+22      }
+(gdb) next
+main () at main.c:49
+49      }
+(gdb) next
+__libc_start_call_main (main=main@entry=0x555555555285 <main>, argc=argc@entry=3, argv=argv@entry=0x7fffffffde18)
+    at ../sysdeps/nptl/libc_start_call_main.h:74
+warning: 74     ../sysdeps/nptl/libc_start_call_main.h: No such file or directory
+(gdb) next
+[Inferior 1 (process 11187) exited normally]
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:47
+47          printf("%d\n", my_pow(a, b));
+(gdb) bt
+#0  main () at main.c:47
+(gdb) set var a = 2, b = 5
+(gdb) ptype a
+type = int
+(gdb) print my_pow(a, b)
+$1 = 32
+(gdb) next
+32
+48          print(a, b);
+(gdb) next
+2 - even, 3 - not even, 4 - even, 5 - not even, 
+49      }
+(gdb) bt
+#0  main () at main.c:49
+(gdb) continue
+Continuing.
+[Inferior 1 (process 11611) exited normally]
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+Breakpoint 1, main () at main.c:47
+47          printf("%d\n", my_pow(a, b));
+(gdb) set var a = 2, b = 5
+(gdb) step
+my_pow (base=2, power=5) at main.c:11
+11          if (power == 0)
+(gdb) step
+13          return base * my_pow(base, power - 1);
+(gdb) step
+my_pow (base=2, power=4) at main.c:11
+11          if (power == 0)
+(gdb) step
+13          return base * my_pow(base, power - 1);
+(gdb) step
+my_pow (base=2, power=3) at main.c:11
+11          if (power == 0)
+(gdb) step
+13          return base * my_pow(base, power - 1);
+(gdb) step
+my_pow (base=2, power=2) at main.c:11
+11          if (power == 0)
+(gdb) bt
+#0  my_pow (base=2, power=2) at main.c:11
+#1  0x000055555555519a in my_pow (base=2, power=3) at main.c:13
+#2  0x000055555555519a in my_pow (base=2, power=4) at main.c:13
+#3  0x000055555555519a in my_pow (base=2, power=5) at main.c:13
+#4  0x00005555555552a0 in main () at main.c:47
+(gdb) continue
+Continuing.
+32
+2 - even, 3 - not even, 4 - even, 5 - not even, 
+[Inferior 1 (process 12235) exited normally]
+(gdb) Quit
+(gdb) break my_pow
+Breakpoint 2 at 0x55555555517b: file main.c, line 11.
+(gdb) break print
+Breakpoint 3 at 0x5555555551b2: file main.c, line 18.
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 2 5
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 1, main () at main.c:47
+47          printf("%d\n", my_pow(a, b));
+(gdb) set var a = 2, b = 5
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=5) at main.c:11
+11          if (power == 0)
+(gdb) next
+13          return base * my_pow(base, power - 1);
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=4) at main.c:11
+11          if (power == 0)
+(gdb) next
+13          return base * my_pow(base, power - 1);
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=3) at main.c:11
+11          if (power == 0)
+(gdb) next
+13          return base * my_pow(base, power - 1);
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=2) at main.c:11
+11          if (power == 0)
+(gdb) next
+13          return base * my_pow(base, power - 1);
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=1) at main.c:11
+11          if (power == 0)
+(gdb) bt
+#0  my_pow (base=2, power=1) at main.c:11
+#1  0x000055555555519a in my_pow (base=2, power=2) at main.c:13
+#2  0x000055555555519a in my_pow (base=2, power=3) at main.c:13
+#3  0x000055555555519a in my_pow (base=2, power=4) at main.c:13
+#4  0x000055555555519a in my_pow (base=2, power=5) at main.c:13
+#5  0x00005555555552a0 in main () at main.c:47
+(gdb) bt
+#0  my_pow (base=2, power=1) at main.c:11
+#1  0x000055555555519a in my_pow (base=2, power=2) at main.c:13
+#2  0x000055555555519a in my_pow (base=2, power=3) at main.c:13
+#3  0x000055555555519a in my_pow (base=2, power=4) at main.c:13
+#4  0x000055555555519a in my_pow (base=2, power=5) at main.c:13
+#5  0x00005555555552a0 in main () at main.c:47
+(gdb) next
+13          return base * my_pow(base, power - 1);
+(gdb) next
+
+Breakpoint 2, my_pow (base=2, power=0) at main.c:11
+11          if (power == 0)
+(gdb) next
+12              return 1;
+(gdb) next
+14      }
+(gdb) next
+14      }
+(gdb) next
+14      }
+(gdb) next
+14      }
+(gdb) next
+14      }
+(gdb) next
+14      }
+(gdb) next
+32
+main () at main.c:48
+48          print(a, b);
+(gdb) continue
+Continuing.
+
+Breakpoint 3, print (l=2, r=5) at main.c:18
+18          if (l % 2 == 0)
+(gdb) Quit
+
+(gdb) break print_even
+Breakpoint 1 at 0x1231: file main.c, line 25.
+(gdb) break print_not_even
+Breakpoint 2 at 0x1284: file main.c, line 34.
+(gdb) break main
+Breakpoint 3 at 0x12d1: file main.c, line 43.
+(gdb) run
+Starting program: /home/zhenia/C/Lab10/a.out 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Breakpoint 3, main () at main.c:43
+43      int main() {
+(gdb) set var a = 2, b = 5
+(gdb) next
+46          scanf("%d %d", &a, &b);
+(gdb) 2 5
+Undefined command: "2".  Try "help".
+(gdb) next
+2 5
+47          printf("%d\n", my_pow(a, b));
+(gdb) next
+32
+48          print(a, b);
+(gdb) next
+
+Breakpoint 1, print_even (l=2, r=5) at main.c:25
+25          if (l > r){
+(gdb) next
+29          printf("%d - even, ", l);
+(gdb) next
+30          print_not_even(l + 1, r);
+(gdb) bt
+#0  print_even (l=2, r=5) at main.c:30
+#1  0x000055555555520b in print (l=2, r=5) at main.c:19
+#2  0x0000555555555333 in main () at main.c:48
+(gdb) next
+
+Breakpoint 2, print_not_even (l=3, r=5) at main.c:34
+34          if (l > r){
+(gdb) next
+38          printf("%d - not even, ", l);
+(gdb) next
+39          print_even(l + 1, r);
+(gdb) bt
+#0  print_not_even (l=3, r=5) at main.c:39
+#1  0x0000555555555270 in print_even (l=2, r=5) at main.c:30
+#2  0x000055555555520b in print (l=2, r=5) at main.c:19
+#3  0x0000555555555333 in main () at main.c:48
+(gdb) next
+
+Breakpoint 1, print_even (l=4, r=5) at main.c:25
+25          if (l > r){
+(gdb) next
+29          printf("%d - even, ", l);
+(gdb) next
+30          print_not_even(l + 1, r);
+(gdb) next
+
+Breakpoint 2, print_not_even (l=5, r=5) at main.c:34
+34          if (l > r){
+(gdb) bt
+#0  print_not_even (l=5, r=5) at main.c:34
+#1  0x0000555555555270 in print_even (l=4, r=5) at main.c:30
+#2  0x00005555555552c3 in print_not_even (l=3, r=5) at main.c:39
+#3  0x0000555555555270 in print_even (l=2, r=5) at main.c:30
+#4  0x000055555555520b in print (l=2, r=5) at main.c:19
+#5  0x0000555555555333 in main () at main.c:48
+(gdb) next
+38          printf("%d - not even, ", l);
+(gdb) next
+39          print_even(l + 1, r);
+(gdb) next
+
+Breakpoint 1, print_even (l=6, r=5) at main.c:25
+25          if (l > r){
+(gdb) bt
+#0  print_even (l=6, r=5) at main.c:25
+#1  0x00005555555552c3 in print_not_even (l=5, r=5) at main.c:39
+#2  0x0000555555555270 in print_even (l=4, r=5) at main.c:30
+#3  0x00005555555552c3 in print_not_even (l=3, r=5) at main.c:39
+#4  0x0000555555555270 in print_even (l=2, r=5) at main.c:30
+#5  0x000055555555520b in print (l=2, r=5) at main.c:19
+#6  0x0000555555555333 in main () at main.c:48
+(gdb) 
+```

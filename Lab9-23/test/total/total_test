@@ -1,0 +1,14 @@
+
+#!/bin/bash
+
+echo "" > test/total.txt
+
+for i in {-5..5}; do 
+    for j in {-5..5}; do
+        for l in {-5..5}; do
+            echo "$i $j $l" | python3 test/total/total.py > test/total/total_py.txt
+            echo "$i $j $l" | ./test/total/total.out > test/total/total_c.txt
+            python3 test/total/total_test.py >> test/total.txt
+        done
+    done
+done

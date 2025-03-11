@@ -1,0 +1,2 @@
+/usr/bin/ld: /tmp/ccLDpqU6.o:(.data+0x0): multiple definition of `i_am_everywhere'; /tmp/ccG7fzhn.o:(.data+0x0): first defined here
+collect2: error: ld returned 1 exit status

@@ -1,0 +1,8 @@
+Linking/main.c: In function ‘main’:
+Linking/main.c:8:9: error: conflicting types for ‘div’; have ‘int(double,  double)’
+    8 |     int div(double a, double b); // Такая же функция в mathlib.h имеет другие сигнатуры
+      |         ^~~
+In file included from Linking/main.c:2:
+Linking/mathlib.h:1:5: note: previous declaration of ‘div’ with type ‘int(int,  int)’
+    1 | int div(int a ,int b);
+      |     ^~~

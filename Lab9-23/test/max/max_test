@@ -1,0 +1,12 @@
+
+#!/bin/bash
+
+echo "" > test/max.txt
+
+for i in {-5..5}; do 
+    for j in {-5..5}; do
+        echo "$i $j" | python3 test/max/max.py > test/max/max_py.txt
+        echo "$i $j" | ./test/max/max.out > test/max/max_c.txt
+        python3 test/max/max_test.py >> test/max.txt
+    done
+done
