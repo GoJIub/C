@@ -16,8 +16,11 @@ typedef struct {
     elem* prev;
 } iter;
 
-iter ldbl_begin(list_dbl* l);
-iter ldbl_end(list_dbl* l);
+
+list_dbl* ldbl_create();
+void ldbl_destroy(list_dbl* obj);
+iter ldbl_begin(list_dbl* obj);
+iter ldbl_end(list_dbl* obj);
 iter ldbl_iter_move_next(iter it);
 int ldbl_iter_equal(iter it1, iter it2);
 double ldbl_iter_get(iter it);

@@ -1,12 +1,30 @@
 #include "list_dbl.h"
 #include <stdlib.h>
 
-iter ldbl_begin(list_dbl* l) {
-    return (iter){.l = l, .prev = NULL};
+
+list_dbl* ldbl_create() {
+    list_dbl* obj = malloc(sizeof(list_dbl));
+    obj -> first = NULL;
+    obj -> last = NULL;
+    return obj;
 }
 
-iter ldbl_end(list_dbl* l) {
-    return (iter){.l = l, .prev = l -> last};
+void ldbl_destroy(list_dbl* obj) {
+    elem* e = obj -> first;
+    while (e != NULL) {
+        elem* next = e -> next;
+        free(e);
+        e = next;
+    }
+    free(obj);
+}
+
+iter ldbl_begin(list_dbl* obj) {
+    return (iter){.l = obj, .prev = NULL};
+}
+
+iter ldbl_end(list_dbl* obj) {
+    return (iter){.l = obj, .prev = obj -> last};
 }
 
 iter ldbl_iter_move_next(iter it) {
@@ -21,9 +39,37 @@ int ldbl_iter_equal(iter it1, iter it2) {
 double ldbl_iter_get(iter it) {
     return it.prev == NULL ? it.l -> first -> val : it.prev -> next -> val;
 }
+
 void ldbl_iter_set(iter it, double val) {
     if (it.prev == NULL) it.l -> first -> val = val;
     else it.prev -> next -> val = val;
 }
-void ldbl_iter_insert(iter it, double val);
-void ldbl_iter_remove(iter it);
+
+void ldbl_iter_insert(iter it, double val) {
+    elem* new_elem = malloc(sizeof(elem));
+    new_elem -> val = val;
+
+    if (it.prev == NULL) {
+        new_elem -> next = it.l -> first;
+        it.l -> first = new_elem;
+        if (it.l -> last == NULL) it.l -> last = new_elem;
+    } else {
+        new_elem -> next = it.prev -> next;
+        it.prev -> next = new_elem;
+        if (new_elem -> next == NULL) it.l -> last = new_elem;
+    }
+}
+
+void ldbl_iter_remove(iter it) {
+    if (it.prev == NULL) {
+        elem* e = it.l -> first;
+        it.l -> first = e -> next;
+        free(e);
+        if (it.l -> first == NULL) it.l -> last = NULL;
+    } else {
+        elem* e = it.prev -> next;
+        it.prev -> next = e -> next;
+        if (it.l -> last == NULL) it.l -> last = it.prev;
+        free(e);
+    }
+}
