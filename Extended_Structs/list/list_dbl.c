@@ -64,12 +64,12 @@ void ldbl_iter_remove(iter it) {
     if (it.prev == NULL) {
         elem* e = it.l -> first;
         it.l -> first = e -> next;
-        free(e);
         if (it.l -> first == NULL) it.l -> last = NULL;
+        free(e);
     } else {
         elem* e = it.prev -> next;
         it.prev -> next = e -> next;
-        if (it.l -> last == NULL) it.l -> last = it.prev;
+        if (e -> next == NULL) it.l -> last = it.prev;
         free(e);
     }
 }
