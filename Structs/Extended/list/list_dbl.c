@@ -28,7 +28,7 @@ iter ldbl_end(list_dbl* obj) {
 }
 
 iter ldbl_iter_move_next(iter it) {
-    it.prev =it.prev == NULL ? it.l -> first : it.prev -> next;
+    it.prev = it.prev == NULL ? it.l -> first : it.prev -> next;
     return it;
 }
 
@@ -48,7 +48,6 @@ void ldbl_iter_set(iter it, double val) {
 void ldbl_iter_insert(iter it, double val) {
     elem* new_elem = malloc(sizeof(elem));
     new_elem -> val = val;
-
     if (it.prev == NULL) {
         new_elem -> next = it.l -> first;
         it.l -> first = new_elem;
@@ -56,7 +55,7 @@ void ldbl_iter_insert(iter it, double val) {
     } else {
         new_elem -> next = it.prev -> next;
         it.prev -> next = new_elem;
-        if (new_elem -> next == NULL) it.l -> last = new_elem;
+        if (it.l -> last == it.prev) it.l -> last = new_elem;
     }
 }
 
