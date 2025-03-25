@@ -1,7 +1,7 @@
-#include "../Structs/Extended/stack/stack_dbl.h"
+#include "../../Structs/Extended/stack/stack_dbl.h"
 
 double remove_max(stack_dbl* obj) {
-    stack_dbl* storage = create();
+    stack_dbl* storage = sdbl_create(10);
     double cur_max = sdbl_pop_back(obj);
     sdbl_push_back(storage, cur_max);
     while (!sdbl_is_empty(obj)) {
@@ -23,7 +23,7 @@ double remove_max(stack_dbl* obj) {
 }
 
 void select_sort(stack_dbl* obj) {
-    stack_dbl* sorted = create();
+    stack_dbl* sorted = sdbl_create(10);
     while (!sdbl_is_empty(obj)) sdbl_push_back(sorted, remove_max(obj));
     while (!sdbl_is_empty(sorted)) sdbl_push_back(obj, sdbl_pop(back(sorted)));
     sdbl_destroy(sorted);
