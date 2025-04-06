@@ -1,6 +1,6 @@
 #include "../../Structs/Extended/deque/deque_dbl.h"
  
- int step_of_a_sort(deque_dbl* obj) {
+int step_of_a_sort(deque_dbl* obj) {
     if (ddbl_is_empty(obj)) return 0;
     double e1 = ddbl_pop_front(obj);
     if (ddbl_is_empty(obj)) {
