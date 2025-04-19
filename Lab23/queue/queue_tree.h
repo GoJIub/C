@@ -1,6 +1,6 @@
 #pragma once
 
-#include "tree.h"
+#include "../binaryTree/tree.h"
 
 typedef struct {
     tree* buf;
@@ -14,4 +14,5 @@ void qtree_destroy(queue_tree* obj);
 int qtree_is_empty(queue_tree* obj);
 int qtree_get_size(queue_tree* obj);
 int qtree_push_back(queue_tree* obj, tree value);
+tree qtree_top(queue_tree* obj);
 tree qtree_pop_front(queue_tree* obj);

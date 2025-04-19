@@ -15,11 +15,11 @@ int isEmpty(tree t);
 double getValue(tree t);
 tree getLeft(tree t);
 tree getRight(tree t);
-void destroy(tree t);
-void destroyRecursive(tree t);
+void destroyTree(tree t);
 
 tree add(tree t, double val);
 int addNew(tree* t, double val);
+int addNode(tree *t, double val);
 tree removeNode(tree t, double val);
 
 int getDepth(tree t);
@@ -27,3 +27,8 @@ int levelWidth(tree t, int target);
 int getWidth(tree t);
 int getWidthVector(tree t);
 int getWidthBFS(tree t);
+
+void printTreePretty(tree t, int level);
+void printTree(tree t, int level);
+
+int getPower(tree t);

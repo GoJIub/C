@@ -1,12 +1,11 @@
-#include "queue_tree.h"
-#include "tree.h"
+#include "queue_lex.h"
 #include <stdlib.h>
 
-queue_tree* qtree_create(int max_len) {
-  queue_tree* res = malloc(sizeof(queue_tree));
+queue_lex* qlex_create(int max_len) {
+  queue_lex* res = malloc(sizeof(queue_lex));
   if (res == NULL) return NULL;
   res -> max_len = max_len;
-  res -> buf = malloc(sizeof(tree) * max_len);
+  res -> buf = malloc(sizeof(char) * max_len);
   if (res -> buf == NULL) {
       free(res);
       return NULL;
@@ -16,9 +15,9 @@ queue_tree* qtree_create(int max_len) {
   return res;
 }
 
-static int grow(queue_tree* obj) {
+static int grow(queue_lex* obj) {
   int new_max_len = obj -> max_len * 2;
-  tree* new_buf = realloc(obj -> buf, sizeof(tree) * new_max_len);
+  char* new_buf = realloc(obj -> buf, sizeof(char) * new_max_len);
   if (new_buf == NULL) return 0;
   for (int i = obj -> max_len - 1; i >= obj -> start; i--)
     new_buf[new_max_len - obj -> len + i] = new_buf[i];
@@ -28,21 +27,17 @@ static int grow(queue_tree* obj) {
   return 1;
 }
 
-void qtree_destroy(queue_tree* obj) {
+void qlex_destroy(queue_lex* obj) {
   if (!obj) return;
   free(obj -> buf);
   free(obj);
 }
 
-int qtree_is_empty(queue_tree* obj) {
+int qlex_is_empty(queue_lex* obj) {
   return obj -> len == 0;
 }
 
-int qtree_get_size(queue_tree* obj) {
-    return obj -> len;
-}
-
-int qtree_push_back(queue_tree* obj, tree value) {
+int qlex_push_back(queue_lex* obj, char value) {
   if (obj -> len == obj -> max_len)
     if (!grow(obj)) return 0;
   obj -> buf[(obj -> len + obj -> start) % obj -> max_len] = value;
@@ -50,8 +45,8 @@ int qtree_push_back(queue_tree* obj, tree value) {
   return 1;
 }
 
-tree qtree_pop_front(queue_tree* obj) {
-  tree value = obj -> buf[obj -> start];
+char qlex_pop_front(queue_lex* obj) {
+  char value = obj -> buf[obj -> start];
   obj -> start = (obj -> start + 1) % obj -> max_len;
   obj -> len--;
   return value;

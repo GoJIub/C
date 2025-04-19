@@ -1,26 +1,5 @@
-#include "tree.h"
+#include "../binaryTree/tree.h"
 #include <stdio.h>
-
-void printTree(tree t) {
-    if (isEmpty(t)) {
-        return;
-    }
-    printTree(getLeft(t));
-    printf("%.2f ", getValue(t));
-    printTree(getRight(t));
-}
-
-void printTreePretty(tree t, int level) {
-    if (isEmpty(t)) {
-        return;
-    }
-    printTreePretty(getRight(t), level + 1);
-    for (int i = 0; i < level; i++) {
-        printf("    ");
-    }
-    printf("%.2f\n", getValue(t));
-    printTreePretty(getLeft(t), level + 1);
-}
 
 int main() {
     printf("Creating empty tree...\n");
