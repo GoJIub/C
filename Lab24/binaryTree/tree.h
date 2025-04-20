@@ -19,7 +19,6 @@ void destroyTree(tree t);
 
 tree add(tree t, char val);
 int addNew(tree* t, char val);
-int addNode(tree *t, char val);
 tree removeNode(tree t, char val);
 
 int getDepth(tree t);
@@ -29,3 +28,5 @@ int getWidthVector(tree t);
 int getWidthBFS(tree t);
 
 void printTreePretty(tree t, int level);
+
+void deleteUnitMultiply(tree* t);

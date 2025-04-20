@@ -191,13 +191,30 @@ int getWidthBFS(tree t) {
 }
 
 void printTreePretty(tree t, int level) {
-    if (isEmpty(t)) {
-        return;
-    }
+    if (isEmpty(t)) return;
     printTreePretty(getRight(t), level + 1);
-    for (int i = 0; i < level; i++) {
-        printf("    ");
-    }
+    for (int i = 0; i < level; i++) printf("    ");
     printf("%c\n", getValue(t));
     printTreePretty(getLeft(t), level + 1);
+}
+
+void deleteUnitMultiply(tree* t) {
+    if (isEmpty(*t)) return;
+
+    deleteUnitMultiply(&(*t)->left);
+    deleteUnitMultiply(&(*t)->right);
+
+    if ((*t)->val == '*') {
+        if ((*t)->left != NULL && (*t)->left->val == '1') {
+            tree tmp = *t;
+            *t = (*t)->right;
+            destroy(tmp->left);
+            destroy(tmp);
+        } else if ((*t)->right != NULL && (*t)->right->val == '1') {
+            tree tmp = *t;
+            *t = (*t)->left;
+            destroy(tmp->right);
+            destroy(tmp);
+        }
+    }
 }
