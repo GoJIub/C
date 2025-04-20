@@ -1,11 +1,11 @@
-#include "stack_lex.h"
+#include "stack_tree.h"
 #include <stdlib.h>
 
-stack_lex* slex_create(int max_len) {
-  stack_lex* res = malloc(sizeof(stack_lex));
+stack_tree* stree_create(int max_len) {
+  stack_tree* res = malloc(sizeof(stack_tree));
   if (res == NULL) return NULL;
   res -> max_len = max_len;
-  res -> buf = malloc(sizeof(char) * max_len);
+  res -> buf = malloc(sizeof(tree) * max_len);
   if (res -> buf == NULL) {
       free(res);
       return NULL;
@@ -14,26 +14,26 @@ stack_lex* slex_create(int max_len) {
   return res;
 }
 
-static int grow(stack_lex* obj) {
+static int grow(stack_tree* obj) {
   int new_max_len = obj -> max_len * 2;
-  char* new_buf = realloc(obj -> buf, sizeof(char) * new_max_len);
+  tree* new_buf = realloc(obj -> buf, sizeof(tree) * new_max_len);
   if (new_buf == NULL) return 0;
   obj -> buf = new_buf;
   obj -> max_len = new_max_len;
   return 1;
 }
 
-void slex_destroy(stack_lex* obj) {
+void stree_destroy(stack_tree* obj) {
   if (!obj) return;
   free(obj -> buf);
   free(obj);
 }
 
-int slex_is_empty_stack(stack_lex* obj) {
+int stree_is_empty(stack_tree* obj) {
   return obj -> len == 0;
 }
 
-int slex_push_back(stack_lex* obj, char value) {
+int stree_push_back(stack_tree* obj, tree value) {
   if (obj -> len == obj -> max_len)
     if (!grow(obj)) return 0;
   obj -> buf[obj -> len] = value;
@@ -41,8 +41,12 @@ int slex_push_back(stack_lex* obj, char value) {
   return 1;
 }
 
-char slex_pop_back_stack(stack_lex* obj) {
-  char value = obj -> buf[obj -> len - 1];
+tree stree_pop_back(stack_tree* obj) {
+  tree value = obj -> buf[obj -> len - 1];
   obj -> len--;
   return value;
+}
+
+tree stree_top(stack_tree* obj) {
+  return obj -> buf[0];
 }

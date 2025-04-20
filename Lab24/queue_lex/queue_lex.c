@@ -51,3 +51,7 @@ char qlex_pop_front(queue_lex* obj) {
   obj -> len--;
   return value;
 }
+
+char qlex_top(queue_lex* obj) {
+  return obj -> buf[obj -> start];
+}
