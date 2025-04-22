@@ -3,121 +3,130 @@
 #include <string.h>
 #include <ctype.h>
 #include "main.h"
+#include "token/token.h"
 
-static int is_op(char c) {
-    char *operators = "~+-*^/!";
-    return strchr(operators, c) != NULL;
+static int is_op_char(char c) {
+    return strchr("+-*/^!~", c) != NULL;
 }
 
-static int is_const(char c) {
-    if (isdigit(c)) return 1;
-    return 0;
+static int is_right_assoc(Token token) {
+    return token.value[0] == '^' || token.value[0] == '~' || token.value[0] == '!';
 }
 
-static int is_var(char c) {
-    if (isalpha(c) && !is_op(c)) return 1;
-    return 0;
-}
-
-static int is_p_left(char c) {
-    if (c == '(') return 1;
-    return 0;
-}
-
-static int is_p_right(char c) {
-    if (c == ')') return 1;
-    return 0;
-}
-
-static int is_right_assoc(char c) {
-    return c == '^' || c == '~' || c == '!';
-}
-
-static int op_priority(char op) {
-    switch (op) {
+static int op_priority(Token token) {
+    switch (token.value[0]) {
         case '!':
-        case '~':
-            return 4;
-        case '^':
-            return 3;
+        case '~': return 4;
+        case '^': return 3;
         case '*':
-        case '/':
-            return 2;
+        case '/': return 2;
         case '+':
-        case '-':
-            return 1;
+        case '-': return 1;
+        default: return 0;
     }
 }
 
-static int should_displace(char lex, char target) {
-    if (is_p_left(target)) return 0;
+static int should_displace(Token lex, Token target) {
+    if (target.type == TOK_PAREN && target.value[0] == '(') return 0;
     int lex_prio = op_priority(lex);
     int target_prio = op_priority(target);
-    
-    if (is_right_assoc(lex))
-        return target_prio > lex_prio;
-    else
-        return target_prio >= lex_prio;
+    return is_right_assoc(lex) ? target_prio > lex_prio : target_prio >= lex_prio;
 }
 
 read_result readline(queue_lex* out) {
     read_result result = {out, {RESULT_OK, "Success", -1}};
-    int prev = 0;
+    char buffer[256]; // Буфер для сборки токенов
+    int buffer_pos = 0;
     int pos = 0;
-    int cur = getchar();
+    int prev_type = -1; // Для отслеживания унарных операторов
+    int c = getchar();
 
     if (out == NULL) {
         result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Output queue is NULL", -1};
         return result;
     }
 
-    while (cur != EOF && cur != '\n') {
-        if (is_const(cur) || is_var(cur)) {
-            if (!qlex_push_back(out, cur)) {
-                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
-                return result;
-            }
-        } 
-        else if (is_op(cur)) {
-            char op = cur;
-            if (cur == '-') {
-                op = (prev == 0 || is_op(prev) || is_p_left(prev)) ? '~' : '-';
-            }
-            
-            if (!qlex_push_back(out, op)) {
-                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
-                return result;
-            }
-        } 
-        else if (is_p_left(cur) || is_p_right(cur)) {
-            if (!qlex_push_back(out, cur)) {
-                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
-                return result;
-            }
-        } 
-        else if (!isspace(cur)) {
-            result.error = (ErrorInfo){ERROR_INVALID_SYMBOL, "Invalid character in input", pos};
-            return result;
+    while (c != EOF && c != '\n') {
+        if (isspace(c)) {
+            c = getchar();
+            pos++;
+            continue;
         }
-        
-        prev = cur;
-        pos++;
-        cur = getchar();
+
+        buffer_pos = 0;
+
+        // Числовые константы
+        if (isdigit(c)) {
+            while (isdigit(c) || c == '.') {
+                buffer[buffer_pos++] = c;
+                c = getchar();
+            }
+            buffer[buffer_pos] = '\0';
+            Token token = {strdup(buffer), TOK_CONST};
+            if (!qlex_push_back(out, token)) {
+                free(token.value);
+                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
+                return result;
+            }
+            prev_type = TOK_CONST;
+            pos += buffer_pos;
+            continue;
+        }
+
+        // Переменные
+        if (isalpha(c)) {
+            while (isalnum(c)) {
+                buffer[buffer_pos++] = c;
+                c = getchar();
+            }
+            buffer[buffer_pos] = '\0';
+            Token token = {strdup(buffer), TOK_VAR};
+            if (!qlex_push_back(out, token)) {
+                free(token.value);
+                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
+                return result;
+            }
+            prev_type = TOK_VAR;
+            pos += buffer_pos;
+            continue;
+        }
+
+        // Операторы и скобки
+        if (is_op_char(c) || c == '(' || c == ')') {
+            buffer[0] = c;
+            buffer[1] = '\0';
+            Token token;
+            if (c == '(' || c == ')') {
+                token = (Token){strdup(buffer), TOK_PAREN};
+            } else if (c == '-' && (prev_type == -1 || prev_type == TOK_OP || prev_type == TOK_UNARY_OP || prev_type == TOK_PAREN)) {
+                token = (Token){strdup("~"), TOK_UNARY_OP};
+            } else {
+                token = (Token){strdup(buffer), is_op_char(c) ? TOK_OP : TOK_UNARY_OP};
+            }
+            if (!qlex_push_back(out, token)) {
+                free(token.value);
+                result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
+                return result;
+            }
+            prev_type = token.type;
+            c = getchar();
+            pos++;
+            continue;
+        }
+
+        result.error = (ErrorInfo){ERROR_INVALID_SYMBOL, "Invalid character in input", pos};
+        return result;
     }
 
-    if (pos > 0 && is_op(prev) && prev != '!' && prev != '~') {
-        result.error = (ErrorInfo){
-            ERROR_INVALID_EXPRESSION, 
-            "Expression cannot end with an operator", 
-            pos-1
-        };
+    if (pos > 0 && (prev_type == TOK_OP && strcmp(qlex_top(out).value, "!") != 0 && strcmp(qlex_top(out).value, "~") != 0)) {
+        result.error = (ErrorInfo){ERROR_INVALID_EXPRESSION, "Expression cannot end with an operator", pos-1};
         return result;
     }
 
     if (pos == 0) {
         result.error = (ErrorInfo){ERROR_EMPTY_INPUT, "Empty input line", -1};
     }
-    
+
     return result;
 }
 
@@ -137,68 +146,73 @@ postfix_result convertToPostfix(queue_lex* q, queue_lex* out) {
 
     int pos = 0;
     while (!qlex_is_empty(q)) {
-        char lex = qlex_pop_front(q);
+        Token lex = qlex_pop_front(q);
         
-        if (is_const(lex) || is_var(lex)) {
+        if (lex.type == TOK_CONST || lex.type == TOK_VAR) {
             if (!qlex_push_back(out, lex)) {
+                free(lex.value); // Освобождаем строку токена
                 result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
                 slex_destroy(s);
                 return result;
             }
-        } 
-        else if (is_p_left(lex)) {
+        } else if (lex.type == TOK_PAREN && strcmp(lex.value, "(") == 0) {
             if (!slex_push_back(s, lex)) {
+                free(lex.value);
                 result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Stack push failed", pos};
                 slex_destroy(s);
                 return result;
             }
-        } 
-        else if (is_p_right(lex)) {
-            while (!slex_is_empty(s) && !is_p_left(slex_top(s))) {
+        } else if (lex.type == TOK_PAREN && strcmp(lex.value, ")") == 0) {
+            while (!slex_is_empty(s) && strcmp(slex_top(s).value, "(") != 0) {
                 if (!qlex_push_back(out, slex_pop_back(s))) {
                     result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
                     slex_destroy(s);
                     return result;
                 }
             }
-            
             if (slex_is_empty(s)) {
+                free(lex.value);
                 result.error = (ErrorInfo){ERROR_UNBALANCED_PARENS, "Unbalanced parentheses", pos};
                 slex_destroy(s);
                 return result;
             }
-            
-            slex_pop_back(s);
-        } 
-        else if (is_op(lex)) {
-            while (!slex_is_empty(s) && 
-                  !is_p_left(slex_top(s)) && 
-                  should_displace(lex, slex_top(s))) {
+            Token open_paren = slex_pop_back(s); // Удаляем '('
+            free(open_paren.value); // Освобождаем строку
+            free(lex.value);
+        } else if (lex.type == TOK_OP || lex.type == TOK_UNARY_OP) {
+            while (!slex_is_empty(s) && strcmp(slex_top(s).value, "(") != 0 && should_displace(lex, slex_top(s))) {
                 if (!qlex_push_back(out, slex_pop_back(s))) {
+                    free(lex.value);
                     result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
                     slex_destroy(s);
                     return result;
                 }
             }
-            
             if (!slex_push_back(s, lex)) {
+                free(lex.value);
                 result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Stack push failed", pos};
                 slex_destroy(s);
                 return result;
             }
+        } else {
+            free(lex.value);
+            result.error = (ErrorInfo){ERROR_INVALID_SYMBOL, "Invalid token type", pos};
+            slex_destroy(s);
+            return result;
         }
         pos++;
     }
 
     while (!slex_is_empty(s)) {
-        char op = slex_pop_back(s);
-        if (is_p_left(op)) {
+        Token op = slex_pop_back(s);
+        if (strcmp(op.value, "(") == 0) {
+            free(op.value);
             result.error = (ErrorInfo){ERROR_UNBALANCED_PARENS, "Unbalanced parentheses", pos};
             slex_destroy(s);
             return result;
         }
-        
         if (!qlex_push_back(out, op)) {
+            free(op.value);
             result.error = (ErrorInfo){ERROR_MEMORY_ALLOC, "Queue push failed", pos};
             slex_destroy(s);
             return result;
@@ -225,7 +239,7 @@ tree_result convertToTree(queue_lex* q) {
 
     int pos = 0;
     while (!qlex_is_empty(q)) {
-        char token = qlex_pop_front(q);
+        Token token = qlex_pop_front(q);
         tree node = build(token, NULL, NULL);
         
         if (!node) {
@@ -234,8 +248,8 @@ tree_result convertToTree(queue_lex* q) {
             return result;
         }
 
-        if (is_op(token)) {
-            if (token == '~') {
+        if (token.type == TOK_OP || token.type == TOK_UNARY_OP) {
+            if (token.value[0] == '~') {
                 if (stree_is_empty(stack)) {
                     result.error = (ErrorInfo){
                         ERROR_STACK_UNDERFLOW, 
@@ -247,7 +261,7 @@ tree_result convertToTree(queue_lex* q) {
                     return result;
                 }
                 node = build(getValue(node), getLeft(node), stree_pop_back(stack));
-            } else if (token == '!') {
+            } else if (token.value[0] == '!') {
                 if (stree_is_empty(stack)) {
                     result.error = (ErrorInfo){
                         ERROR_STACK_UNDERFLOW, 
@@ -323,24 +337,13 @@ void print_error(const ErrorInfo* error) {
 
 void print_queue(queue_lex* q) {
     if (q == NULL) return;
-    
-    queue_lex* temp = qlex_create(1);
-    if (temp == NULL) {
-        fprintf(stderr, "Warning: Failed to create temp queue for printing\n");
-        return;
+    int i = q->start;
+    int count = 0;
+    while (count < q->len) {
+        printf("%s ", q->buf[i].value);
+        i = (i + 1) % q->max_len;
+        count++;
     }
-
-    while (!qlex_is_empty(q)) {
-        char c = qlex_pop_front(q);
-        printf("%c ", c);
-        qlex_push_back(temp, c);
-    }
-
-    while (!qlex_is_empty(temp)) {
-        qlex_push_back(q, qlex_pop_front(temp));
-    }
-
-    qlex_destroy(temp);
 }
 
 int main() {

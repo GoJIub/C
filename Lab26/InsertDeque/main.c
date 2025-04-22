@@ -3,8 +3,6 @@
 #include <string.h>
 #include "deque_str.h"
 
-#define INITIAL_BUFFER_SIZE 128
-
 int step_of_a_sort(deque_str* obj) {
     if (dstr_is_empty(obj)) return 0;
     char* s1 = dstr_pop_front(obj);
@@ -55,7 +53,7 @@ void insert_sort(deque_str* obj) {
 }
 
 char* read_line() {
-    int capacity = INITIAL_BUFFER_SIZE;
+    int capacity = 128;
     int len = 0;
     char* buffer = malloc(capacity);
     if (!buffer) return NULL;
