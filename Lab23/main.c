@@ -1,17 +1,23 @@
 #include "binaryTree/tree.h"
 #include <stdio.h>
 #include <float.h>
+#include <stdlib.h>
 
 void clearInputBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
 }
 
+void exitProgram(tree t) {
+    destroyTree(t);
+    printf("Exiting program.\n");
+    exit(0);
+}
+
 int main() {
     tree t = createEmpty();
     int choice;
     double val;
-    int level;
 
     while (1) {
         printf("\nOptions:\n");
@@ -22,42 +28,62 @@ int main() {
         printf("  5. Exit\n");
         printf("Choose an action: ");
 
-        while (scanf("%d", &choice) != 1 || choice < 1 || choice > 5) {
+        int scanResult = scanf("%d", &choice);
+        if (scanResult == EOF || feof(stdin)) exitProgram(t);
+        if (scanResult != 1 || choice < 1 || choice > 5) {
             printf("Invalid input. Please enter a number between 1 and 5: ");
             clearInputBuffer();
+            continue;
+        }
+        int c = getchar();
+        if (c != '\n') {
+            printf("Invalid input. Please enter exactly one number: ");
+            clearInputBuffer();
+            continue;
         }
 
-        clearInputBuffer();
         printf("\n");
 
         switch (choice) {
             case 1: {
                 printf("Enter value: ");
-                while (scanf("%lf", &val) != 1) {
+                scanResult = scanf("%lf", &val);
+                if (scanResult == EOF || feof(stdin)) exitProgram(t);
+                if (scanResult != 1) {
                     printf("Invalid input. Please enter a valid number: ");
                     clearInputBuffer();
+                    break;
                 }
-                clearInputBuffer();
+                c = getchar();
+                if (c != '\n') {
+                    printf("Invalid input. Please enter exactly one number: ");
+                    clearInputBuffer();
+                    break;
+                }
 
                 int result = addNode(&t, val);
-
-                if (result == 1) 
-                    printf("Node %.2f was added.\n", val);
-                else if (result == 0 && t != NULL)
-                    printf("Node already exists.\n");
-                else
-                    printf("Failed to add node.\n");
-                
+                if (result == 1) printf("Node %.2f was added.\n", val);
+                else if (result == 0 && t != NULL) printf("Node already exists.\n");
+                else printf("Failed to add node.\n");
                 break;
             }
 
             case 2: {
                 printf("Enter value to remove: ");
-                while (scanf("%lf", &val) != 1) {
+                scanResult = scanf("%lf", &val);
+                if (scanResult == EOF || feof(stdin)) exitProgram(t);
+                if (scanResult != 1) {
                     printf("Invalid input. Please enter a valid number: ");
                     clearInputBuffer();
+                    break;
                 }
-                clearInputBuffer();
+                c = getchar();
+                if (c != '\n') {
+                    printf("Invalid input. Please enter exactly one number: ");
+                    clearInputBuffer();
+                    break;
+                }
+
                 t = removeNode(t, val);
                 printf("Node %.2f was removed.\n", val);
                 break;
@@ -76,9 +102,8 @@ int main() {
             }
 
             case 5: {
-                destroyTree(t);
-                printf("Goodbye.\n");
-                return 0;
+                exitProgram(t);
+                break;
             }
         }
     }

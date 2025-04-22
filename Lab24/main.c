@@ -30,7 +30,7 @@ static int is_p_right(char c) {
 }
 
 static int is_right_assoc(char c) {
-    return c == '^' || c == '~' || c == '!';
+    return c == '^' || c == '~';
 }
 
 static int op_priority(char op) {

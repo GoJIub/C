@@ -17,17 +17,18 @@ tree getLeft(tree t);
 tree getRight(tree t);
 void destroyTree(tree t);
 
-tree add(tree t, double val);
-int addNew(tree* t, double val);
+// tree add(tree t, double val);
+// int addNew(tree* t, double val);
 int addNode(tree *t, double val);
 tree removeNode(tree t, double val);
 
-int getDepth(tree t);
-int levelWidth(tree t, int target);
-int getWidth(tree t);
-int getWidthVector(tree t);
-int getWidthBFS(tree t);
+// int getDepth(tree t);
+// int levelWidth(tree t, int target);
+// int getWidth(tree t);
+// int getWidthVector(tree t);
+// int getWidthBFS(tree t);
 
+void printTree(tree t, int level);
 void printTreePretty(tree t, int level);
 
 int getPower(tree t);

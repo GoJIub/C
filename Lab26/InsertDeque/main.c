@@ -106,7 +106,7 @@ int main(void) {
     
     insert_sort(d);
     
-    printf("\nSorted lines:\n");
+    printf("Sorted lines:\n");
     while (!dstr_is_empty(d)) {
         char* s = dstr_pop_front(d);
         printf("%s\n", s);

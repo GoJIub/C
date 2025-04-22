@@ -51,33 +51,33 @@ void destroyTree(tree t) { // Iteration
     qtree_destroy(q);
 }
 
-tree add(tree t, double val) {
-    if (isEmpty(t)) return build(val, createEmpty(), createEmpty());
-    if (val < getValue(t)) {
-        tree left = add(getLeft(t), val);
-        tree res = build(getValue(t), left, getRight(t));
-        destroy(t);
-        return res;
-    } else if (val > getValue(t)) {
-        tree right = add(getRight(t), val);
-        tree res = build(getValue(t), getLeft(t), right);
-        destroy(t);
-        return res;
-    } else return t;
-}
+// tree add(tree t, double val) {
+//     if (isEmpty(t)) return build(val, createEmpty(), createEmpty());
+//     if (val < getValue(t)) {
+//         tree left = add(getLeft(t), val);
+//         tree res = build(getValue(t), left, getRight(t));
+//         destroy(t);
+//         return res;
+//     } else if (val > getValue(t)) {
+//         tree right = add(getRight(t), val);
+//         tree res = build(getValue(t), getLeft(t), right);
+//         destroy(t);
+//         return res;
+//     } else return t;
+// }
 
-int addNew(tree* t, double val) {
-    if (isEmpty(*t)) {
-        *t = malloc(sizeof(treeNode));
-        (*t) -> val = val;
-        (*t) -> left = NULL;
-        (*t) -> right = NULL;
-        return 1;
-    }
-    if (val < (*t) -> val) return addNew(&(*t) -> left, val);
-    if (val > (*t) -> val) return addNew(&(*t) -> right, val);
-    return 0;
-}
+// int addNew(tree* t, double val) {
+//     if (isEmpty(*t)) {
+//         *t = malloc(sizeof(treeNode));
+//         (*t) -> val = val;
+//         (*t) -> left = NULL;
+//         (*t) -> right = NULL;
+//         return 1;
+//     }
+//     if (val < (*t) -> val) return addNew(&(*t) -> left, val);
+//     if (val > (*t) -> val) return addNew(&(*t) -> right, val);
+//     return 0;
+// }
 
 int addNode(tree *t, double val) { // Iteration
     tree* cur = t;
@@ -174,70 +174,66 @@ static int max(int n, int m) {
     return n > m ? n : m;
 }
 
-int getDepth(tree t) {
-    if (t == NULL) return 0;
-    return 1 + max(getDepth(t -> left), getDepth(t -> right));
-}
+// int getDepth(tree t) {
+//     if (t == NULL) return 0;
+//     return 1 + max(getDepth(t -> left), getDepth(t -> right));
+// }
 
-int levelWidth(tree t, int k) {
-    if (k == 0) return t == NULL ? 0 : 1;
-    return levelWidth(t -> left, k - 1) + levelWidth(t -> right, k - 1);
-}
+// int levelWidth(tree t, int k) {
+//     if (k == 0) return t == NULL ? 0 : 1;
+//     return levelWidth(t -> left, k - 1) + levelWidth(t -> right, k - 1);
+// }
 
-int getWidth(tree t) {
-    int res = 0;
-    int d = getDepth(t);
-    for (int i = 0; i < d; ++i) res = max(res, levelWidth(t, i));
-    return res;
-}
+// int getWidth(tree t) {
+//     int res = 0;
+//     int d = getDepth(t);
+//     for (int i = 0; i < d; ++i) res = max(res, levelWidth(t, i));
+//     return res;
+// }
 
-static void widths(tree t, vector_int* v, int k) {
-    if (t == NULL) return;
-    if (vint_get_size(v) < k + 1) vint_set_size(v, k + 1);
-    vint_set(v, k, vint_get(v, k) + 1);
-    widths(t -> left, v, k + 1);
-    widths(t -> right, v, k + 1);
-}
+// static void widths(tree t, vector_int* v, int k) {
+//     if (t == NULL) return;
+//     if (vint_get_size(v) < k + 1) vint_set_size(v, k + 1);
+//     vint_set(v, k, vint_get(v, k) + 1);
+//     widths(t -> left, v, k + 1);
+//     widths(t -> right, v, k + 1);
+// }
 
-int getWidthVector(tree t) {
-    vector_int* v = vint_create(0);
-    widths(t, v, 0);
-    int res = 0;
-    for (int i = 0; i < vint_get_size(v); ++i) res = max(res, vint_get(v, i));
-    vint_destroy(v);
-    return res;
-}
+// int getWidthVector(tree t) {
+//     vector_int* v = vint_create(0);
+//     widths(t, v, 0);
+//     int res = 0;
+//     for (int i = 0; i < vint_get_size(v); ++i) res = max(res, vint_get(v, i));
+//     vint_destroy(v);
+//     return res;
+// }
 
-int getWidthBFS(tree t) {
-    if (t == NULL) return 0;
-    queue_tree* q1 = qtree_create(1);
-    queue_tree* q2 = qtree_create(1);
-    int res = 0;
-    qtree_push_back(q1, t);
-    while (!qtree_is_empty(q1)) {
-        res = max(res, qtree_get_size(q1));
-        while (!qtree_is_empty(q1)) {
-            tree cur = qtree_pop_front(q1);
-            if (getLeft(cur) != NULL) qtree_push_back(q2, getLeft(cur));
-            if (getRight(cur)!= NULL) qtree_push_back(q2, getRight(cur));
-        }
-        queue_tree* c = q2;
-        q2 = q1;
-        q1 = c;
-    }
-    qtree_destroy(q1);
-    qtree_destroy(q2);
-    return res;
-}
+// int getWidthBFS(tree t) {
+//     if (t == NULL) return 0;
+//     queue_tree* q1 = qtree_create(1);
+//     queue_tree* q2 = qtree_create(1);
+//     int res = 0;
+//     qtree_push_back(q1, t);
+//     while (!qtree_is_empty(q1)) {
+//         res = max(res, qtree_get_size(q1));
+//         while (!qtree_is_empty(q1)) {
+//             tree cur = qtree_pop_front(q1);
+//             if (getLeft(cur) != NULL) qtree_push_back(q2, getLeft(cur));
+//             if (getRight(cur)!= NULL) qtree_push_back(q2, getRight(cur));
+//         }
+//         queue_tree* c = q2;
+//         q2 = q1;
+//         q1 = c;
+//     }
+//     qtree_destroy(q1);
+//     qtree_destroy(q2);
+//     return res;
+// }
 
 void printTreePretty(tree t, int level) {
-    if (isEmpty(t)) {
-        return;
-    }
+    if (isEmpty(t)) return;
     printTreePretty(getRight(t), level + 1);
-    for (int i = 0; i < level; i++) {
-        printf("    ");
-    }
+    for (int i = 0; i < level; i++) printf("    ");
     printf("%.2f\n", getValue(t));
     printTreePretty(getLeft(t), level + 1);
 }
