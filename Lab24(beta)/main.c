@@ -9,22 +9,22 @@
 
 // Проверяет, является ли символ оператором (исключая 'e' для научной нотации)
 static int is_op_char(char c) {
-    return strchr("+-*/^!~", c) != NULL && c != 'e' && c != 'E';
+    return strchr("+-*/%^!~", c) != NULL && c != 'e' && c != 'E';
 }
 
 // Проверяет правоассоциативность оператора
 static int is_right_assoc(Token token) {
-    return token.value[0] == '^' || token.value[0] == '~' || token.value[0] == '!';
+    return token.value[0] == '^' || token.value[0] == '~';
 }
 
 // Возвращает приоритет оператора для обработки порядка операций
 static int op_priority(Token token) {
     switch (token.value[0]) {
-        case '!': case '~': return 4; // Наивысший приоритет (унарные операторы)
-        case '^':           return 3; // Возведение в степень
-        case '*': case '/': return 2; // Умножение/деление
-        case '+': case '-': return 1; // Сложение/вычитание
-        default:           return 0;  // Остальные случаи
+        case '!': case '~':           return 4; // Наивысший приоритет (унарные операторы)
+        case '^':                     return 3; // Возведение в степень
+        case '*': case '/': case '%': return 2; // Умножение/деление
+        case '+': case '-':           return 1; // Сложение/вычитание
+        default:                      return 0;  // Остальные случаи
     }
 }
 
