@@ -14,3 +14,5 @@ int qlex_is_empty(queue_lex* obj);
 int qlex_push_back(queue_lex* obj, Token value);
 Token qlex_pop_front(queue_lex* obj);
 Token qlex_top(queue_lex* obj);
+
+void print_queue(queue_lex* q);

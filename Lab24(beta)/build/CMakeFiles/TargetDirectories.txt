@@ -1,0 +1,3 @@
+D:/Projects/C/Lab24(beta)/build/CMakeFiles/main.dir
+D:/Projects/C/Lab24(beta)/build/CMakeFiles/edit_cache.dir
+D:/Projects/C/Lab24(beta)/build/CMakeFiles/rebuild_cache.dir

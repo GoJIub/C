@@ -1,6 +1,7 @@
 #include "queue_lex.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 queue_lex* qlex_create(int max_len) {
     queue_lex* res = malloc(sizeof(queue_lex));
@@ -31,7 +32,7 @@ static int grow(queue_lex* obj) {
 void qlex_destroy(queue_lex* obj) {
     if (!obj) return;
     for (int i = 0; i < obj->len; i++) {
-        free(obj->buf[(obj->start + i) % obj->max_len].value); // Освобождаем строки
+        free(obj->buf[(obj->start + i) % obj->max_len].value);
     }
     free(obj->buf);
     free(obj);
@@ -58,4 +59,15 @@ Token qlex_pop_front(queue_lex* obj) {
 
 Token qlex_top(queue_lex* obj) {
     return obj->buf[obj->start];
+}
+
+void print_queue(queue_lex* q) {
+    if (q == NULL) return;
+    int i = q->start;
+    int count = 0;
+    while (count < q->len) {
+        printf("%s ", q->buf[i].value);
+        i = (i + 1) % q->max_len;
+        count++;
+    }
 }
