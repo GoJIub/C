@@ -1,0 +1,3 @@
+D:/Projects/C/IXBin/build/CMakeFiles/main.dir
+D:/Projects/C/IXBin/build/CMakeFiles/edit_cache.dir
+D:/Projects/C/IXBin/build/CMakeFiles/rebuild_cache.dir

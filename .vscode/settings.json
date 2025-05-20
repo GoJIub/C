@@ -2,5 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "queue_tree.h": "c"
-    }
+    },
+    "terminal.integrated.encoding": "utf8",
+    "files.encoding": "utf8"
 }
